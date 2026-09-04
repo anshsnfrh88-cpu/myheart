@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة خاصة</title>
+    <style>
+        body {
+            background-color: #0f0f1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* رسم وتصميم القلب */
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ff2e63;
+            transform: rotate(-45deg);
+            animation: pulse 1.2s infinite;
+            margin-bottom: 40px;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #ff2e63;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+
+        /* حركة نبض القلب */
+        @keyframes pulse {
+            0% {
+                transform: rotate(-45deg) scale(1);
+            }
+            50% {
+                transform: rotate(-45deg) scale(1.2);
+            }
+            100% {
+                transform: rotate(-45deg) scale(1);
+            }
+        }
+
+        /* تنسيق النص */
+        .message {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ea907a;
+            text-shadow: 0 0 10px rgba(255, 46, 99, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart"></div>
+    <div class="message">زولي ركشه</div>
+
+</body>
+</html>
